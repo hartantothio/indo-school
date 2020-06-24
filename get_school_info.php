@@ -16,12 +16,13 @@ error_reporting(E_ALL);
 
 require_once(__DIR__ . '/vendor/autoload.php');
 
+$file = 'school_url.csv';
 $client = new Client(['timeout' => 30]);
 $allData = [];
 $fp = fopen(__DIR__ . '/schools.json', 'w');
 
-if (($handle = fopen(__DIR__ . "/school_url.csv", "r")) !== false) {
-    while (($data = fgetcsv($handle, 1000, ",")) !== false) {
+if (($handle = fopen(__DIR__ . '/' . $file, 'r')) !== false) {
+    while (($data = fgetcsv($handle, 1000, ',')) !== false) {
         $school = [];
         $name = $data[0];
         $url = $data[1];
