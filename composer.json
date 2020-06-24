@@ -1,0 +1,16 @@
+{
+    "name": "hartanto/school-crawler",
+    "require": {
+        "guzzlehttp/guzzle": "^6.5",
+        "paquettg/php-html-parser": "^2.2"
+    },
+    "autoload": {
+        "psr-0": {
+            "AppName": "src/"
+        }
+    },
+    "authors": [{
+        "name": "Hartanto Thio",
+        "email": "hartantothio@gmail.com"
+    }]
+}
